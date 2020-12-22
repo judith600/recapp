@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ViewAllRecipesActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5E959595"
+        tools:layout_editor_absoluteX="431dp"
+        tools:layout_editor_absoluteY="-125dp"
+        tools:listitem="@layout/text_row_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

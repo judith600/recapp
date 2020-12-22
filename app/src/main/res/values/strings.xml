@@ -9,4 +9,5 @@
     <string name="str_url">URL</string>
     <string name="str_picture">Foto</string>
     <string name="str_newRecipe">Neues Rezept</string>
+    <string name="element_text">placeholder</string>
 </resources>

@@ -4,65 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#60FFD600"
+    android:background="#5E959595"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="379dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="219dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
         android:onClick="getOtherRecipe"
         android:text="@string/btn_getOtherRec"
-        android:textColor="#304FFE"
-        app:backgroundTint="@android:color/holo_orange_dark"
+        android:textColor="#020202"
+        app:backgroundTint="#0277BD"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:onClick="viewAll"
-        android:text="@string/btn_viewAll"
-        android:textColor="#304FFE"
-        app:backgroundTint="#FFEB3B"
-        app:iconTint="@color/material_on_background_disabled"
-        app:layout_constraintEnd_toStartOf="@+id/btn_add"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="10dp"
         android:onClick="addRecipe"
         android:text="@string/btn_add"
-        android:textColor="#304FFE"
-        app:backgroundTint="#FFEB3B"
+        android:textColor="#070707"
+        app:backgroundTint="#0277BD"
         app:iconTint="@color/material_on_background_disabled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="viewAll"
+        android:text="@string/btn_viewAll"
+        android:textColor="#070707"
+        app:backgroundTint="#0277BD"
+        app:iconTint="@color/material_on_background_disabled"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/randomRecipeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/randomRecipeUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/randomRecipeName"
+        app:layout_constraintTop_toBottomOf="@+id/randomRecipeName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
