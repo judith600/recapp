@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">recapp</string>
+    <string name="btn_add">Hinzufügen</string>
+    <string name="btn_getOtherRec">Anderes Rezept</string>
+    <string name="btn_viewAll">Alle ansehen</string>
+    <string name="str_name">Name</string>
+    <string name="str_ingredients">Zutaten</string>
+    <string name="str_save">Speichern</string>
+    <string name="str_url">URL</string>
+    <string name="str_picture">Foto</string>
+    <string name="str_newRecipe">Neues Rezept</string>
+</resources>
