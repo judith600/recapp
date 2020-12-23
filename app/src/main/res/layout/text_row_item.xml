@@ -4,8 +4,6 @@
     android:layout_height="48dp"
     android:layout_marginLeft="4dp"
     android:layout_marginRight="4dp"
-    android:background="#08090B"
-    android:backgroundTint="#A3283593"
     android:gravity="center_vertical"
     android:padding="8dp">
 
@@ -15,7 +13,8 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8sp"
         android:text="@string/element_text"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        android:textColor="#1565C0"
+        android:textSize="18sp"
+        android:typeface="monospace" />
 
 </FrameLayout>

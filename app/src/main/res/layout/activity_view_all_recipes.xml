@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#5E959595"
+        android:scrollbars="vertical"
         tools:layout_editor_absoluteX="431dp"
         tools:layout_editor_absoluteY="-125dp"
         tools:listitem="@layout/text_row_item" />
