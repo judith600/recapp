@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recapp">
         <activity android:name=".RandomRecipeActivity" />
-        <activity android:name=".ViewAllRecipesActivity" />
+        <activity
+            android:name=".ViewAllRecipesActivity"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".AddRecipeActivity"
             android:parentActivityName=".MainActivity">
