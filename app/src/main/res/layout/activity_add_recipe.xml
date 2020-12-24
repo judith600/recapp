@@ -95,6 +95,7 @@
         android:onClick="saveRecipeAndNavigateBack"
         android:text="@string/str_save"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
