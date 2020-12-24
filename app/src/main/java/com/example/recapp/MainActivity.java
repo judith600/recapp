@@ -45,8 +45,12 @@ public class MainActivity extends AppCompatActivity {
         // Intent intent = new Intent(this, RandomRecipeActivity.class);
         // startActivity(intent);
         Executors.newSingleThreadScheduledExecutor().execute(() -> {
-            recipeList.clear();
-            recipeList.addAll(appDataBase.recipeDAO().getAll());
+            // recipeList.clear();
+            // recipeList.addAll(appDataBase.recipeDAO().getAll());
+            appDataBase.recipeDAO().getAll()
+                    .stream()
+                    .filter(rec -> !recipeList.contains(rec))
+                    .forEach(rec -> recipeList.add(rec));
             Log.d(TAG, "Recipes in db: " + recipeList.size());
         });
         TextView randomRecipeName = findViewById(R.id.randomRecipeName);
