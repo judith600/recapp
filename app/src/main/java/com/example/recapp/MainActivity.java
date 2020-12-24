@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         appDataBase = AppDataBase.getAppDatabaseInstance(getApplicationContext());
-        fillRecipeListStatically();
     }
 
     public void addRecipe(View view) {
@@ -46,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Intent intent = new Intent(this, RandomRecipeActivity.class);
         // startActivity(intent);
         Executors.newSingleThreadScheduledExecutor().execute(() -> {
+            recipeList.clear();
             recipeList.addAll(appDataBase.recipeDAO().getAll());
             Log.d(TAG, "Recipes in db: " + recipeList.size());
         });
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         TextView randomRecipeUrl = findViewById(R.id.randomRecipeUrl);
         randomRecipeName.setText("");
         randomRecipeUrl.setText("");
-        if (recipeList != null) {
+        if (recipeList != null && recipeList.size() > 0) {
             int max = recipeList.size();
             int randomNum = ThreadLocalRandom.current().nextInt(min, max);
             Recipe randomRecipe = recipeList.get(randomNum);
@@ -62,12 +62,5 @@ public class MainActivity extends AppCompatActivity {
                 randomRecipeUrl.setText(recipeList.get(randomNum).getUri().toString());
             }
         }
-    }
-
-    public void fillRecipeListStatically() {
-        recipeList.add(new Recipe("Pommes", URI.create("www.pommes.de")));
-        recipeList.add(new Recipe("Ketchup", URI.create("www.ketchup.de")));
-        recipeList.add(new Recipe("Mayo", URI.create("www.mayo.de")));
-
     }
 }

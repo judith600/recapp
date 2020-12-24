@@ -26,6 +26,9 @@ public interface RecipeDAO {
     @Insert
     long insertRecipe(Recipe recipe);
 
+    @Insert
+    void insertAllRecipes(List<Recipe> recipes);
+
     @Delete
     Integer deleteRecipe(Recipe recipe);
 
